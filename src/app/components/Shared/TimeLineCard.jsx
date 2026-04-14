@@ -9,7 +9,7 @@ const TimeLineCard = () => {
   return (
     <>
       {friendInfo.map((timeline, i) => {
-        console.log(timeline.icon);
+        console.log(timeline.fullDate);
 
         return (
           <div
@@ -22,10 +22,10 @@ const TimeLineCard = () => {
 
             <div className="ml-4 flex-grow">
               <div className="flex flex-wrap items-center gap-1">
-                <span className="font-bold text-emerald-800 text-lg">type</span>
-                <span className="text-slate-500">{timeline.name}</span>
+                <span className="font-bold text-emerald-800 text-lg">{timeline.status}</span>
+                <span className="text-slate-500">With {timeline.name}</span>
               </div>
-              <div className="text-slate-400 text-sm font-medium">date</div>
+              <div className="text-slate-400 text-sm font-medium">{timeline.fullDate}</div>
             </div>
           </div>
         );
