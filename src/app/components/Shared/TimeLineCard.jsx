@@ -4,70 +4,39 @@ import React, { useContext } from "react";
 import { HiChevronDown } from "react-icons/hi";
 
 const TimeLineCard = () => {
-  const { friendInfo ,filterType, setFilterType} = useContext(FriendsContext);
+  const { friendInfo ,filterType, setFilterType,selectedFilter, setSelectedFilter } = useContext(FriendsContext);
  console.log(friendInfo,"friend");
  
   console.log(filterType);
-  // if (filterType.length < 1) {
-  //   return (
-  //     <div className="flex flex-col items-center justify-center min-h-[400px] p-8 text-center bg-white rounded-2xl border-2 border-dashed border-slate-200">
-  //       {/* Animated Icon Circle */}
-  //       <div className="relative mb-6">
-  //         <div className="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center animate-pulse">
-  //           <svg
-  //             xmlns="http://www.w3.org/2000/svg"
-  //             className="h-10 w-10 text-emerald-600"
-  //             fill="none"
-  //             viewBox="0 0 24 24"
-  //             stroke="currentColor"
-  //           >
-  //             <path
-  //               strokeLinecap="round"
-  //               strokeLinejoin="round"
-  //               strokeWidth={1.5}
-  //               d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-  //             />
-  //           </svg>
-  //         </div>
-  //         {/* Subtle decorative rings */}
-  //         <div className="absolute inset-0 w-20 h-20 border-2 border-emerald-100 rounded-full animate-ping opacity-20"></div>
-  //       </div>
 
-  //       {/* Text Content */}
-  //       <h3 className="text-xl font-bold text-slate-800 mb-2">
-  //         No Interactions Found
-  //       </h3>
-  //       <p className="text-slate-500 max-w-[280px] text-sm mb-8 leading-relaxed">
-  //         Your timeline is currently empty. Start by adding your first contact
-  //         or interaction to see it here.
-  //       </p>
-
-  //       {/* Action Button */}
-  //       <button className="px-6 py-2.5 bg-[#244d3f] text-white text-sm font-semibold rounded-lg hover:bg-[#1a3d32] transition-all duration-300 shadow-sm active:scale-95">
-  //         Add Connection
-  //       </button>
-  //     </div>
-  //   );
-  // }
   const handleTimelineByType = (e) => {
-    if (e.target.value === "All") {
+    const value = e.target.value;
+    setSelectedFilter(value); 
+    if (value === "All") {
       setFilterType([...friendInfo]);
+    } else {
+      setFilterType(
+        friendInfo.filter((info) => info.status === value.toLowerCase())
+      );
     }
-    if (e.target.value === "Call") {
-      const call = friendInfo.filter((info) => info.status === "call");
-      console.log(call, "call log");
-      setFilterType(call);
-    }
-    if (e.target.value === "Text") {
-      const text = friendInfo.filter((info) => info.status === "text");
-      console.log(text, "text log");
-      setFilterType(text);
-    }
-    if (e.target.value === "Video") {
-      const video = friendInfo.filter((info) => info.status === "video");
-      console.log(video, "video log");
-      setFilterType(video);
-    }
+    // if (e.target.value === "All") {
+    //   setFilterType([...friendInfo]);
+    // }
+    // if (e.target.value === "Call") {
+    //   const call = friendInfo.filter((info) => info.status === "call");
+    //   console.log(call, "call log");
+    //   setFilterType(call);
+    // }
+    // if (e.target.value === "Text") {
+    //   const text = friendInfo.filter((info) => info.status === "text");
+    //   console.log(text, "text log");
+    //   setFilterType(text);
+    // }
+    // if (e.target.value === "Video") {
+    //   const video = friendInfo.filter((info) => info.status === "video");
+    //   console.log(video, "video log");
+    //   setFilterType(video);
+    // }
   };
 
   console.log(filterType);
@@ -80,6 +49,7 @@ const TimeLineCard = () => {
           <div className="mb-8">
             <div className="relative w-full md:w-64">
               <select
+              value={selectedFilter}
                 onChange={handleTimelineByType}
                 className="w-full p-3 bg-white border border-slate-200 rounded-xl text-slate-700 font-medium text-sm appearance-none focus:outline-none focus:ring-2 focus:ring-emerald-500/10 focus:border-emerald-500 shadow-sm transition-all duration-300 cursor-pointer"
               >

@@ -7,15 +7,27 @@ const FriendsProvider = ({ children }) => {
   const [friendInfo, setFriendInfo] = useState([]);
   
  const [filterType, setFilterType] = useState([]);
-
- useEffect(()=>{
-  setFilterType(friendInfo)
- },[friendInfo])
+ const [selectedFilter, setSelectedFilter] = useState("All");
+useEffect(() => {
+    setFilterType(friendInfo);
+    // friendInfo change হলে current filter অনুযায়ী re-filter করো
+    if (selectedFilter === "All") {
+      setFilterType([...friendInfo]);
+    } else {
+      setFilterType(
+        friendInfo.filter(
+          (info) => info.status === selectedFilter.toLowerCase()
+        )
+      );
+    }
+  }, [friendInfo]);
   const data = {
     friendInfo,
     setFriendInfo,
     filterType,
-    setFilterType
+    setFilterType,
+     selectedFilter,      // export করো
+    setSelectedFilter, 
   };
 
   return (
