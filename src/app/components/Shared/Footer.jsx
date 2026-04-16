@@ -26,10 +26,8 @@ const Footer = () => {
               href="#"
               className="group relative w-10 h-10 flex items-center justify-center bg-white rounded-full text-[#24543c] overflow-hidden transition-all duration-500 shadow-sm"
             >
-              {/* Background Rise Effect */}
               <span className="absolute inset-0 bg-[#1a3d2c] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></span>
 
-              {/* Icons with Transition and Scale on Hover */}
               <div className="relative z-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <FaInstagram
                   size={20}
@@ -82,7 +80,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="w-full pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] md:text-xs text-gray-300 uppercase tracking-widest">
+        <div className="w-full pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] md:text-xs text-gray-300  tracking-widest">
           <p>© 2026 KeenKeeper. All rights reserved.</p>
 
           <div className="flex gap-4 md:gap-6">
