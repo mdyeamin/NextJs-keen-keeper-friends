@@ -7,80 +7,104 @@ const Footer = () => {
   return (
     <footer className="bg-[#24543c] text-white py-8 px-4">
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center px-4">
-  {/* Logo and Brand Name Section */}
-  <div className="flex items-center gap-2 md:gap-3 mb-4">
-    {/* Responsive K Logo Div */}
-    <div className="bg-white text-[#1a3a30] px-2 py-0.5 text-xl sm:px-2.5 sm:py-1 sm:text-2xl md:px-3 md:py-1 md:text-3xl font-extrabold rounded-lg shadow-sm">
-      K
-    </div>
-    
-    {/* Responsive Brand Text */}
-    <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight text-white">
-      KeenKeeper
-    </h2>
-  </div>
+        {/* Logo and Brand Name Section */}
+        <div className="flex items-center gap-2 md:gap-3 mb-4">
+          {/* Responsive K Logo Div */}
+          <div className="bg-white text-[#1a3a30] px-2 py-0.5 text-xl sm:px-2.5 sm:py-1 sm:text-2xl md:px-3 md:py-1 md:text-3xl font-extrabold rounded-lg shadow-sm">
+            K
+          </div>
 
-  {/* Description */}
-  <p className="text-xs md:text-sm text-gray-200 mb-6 max-w-lg leading-relaxed">
-    Your personal shelf of meaningful connections. Browse, tend, and
-    nurture the relationships that matter most.
-  </p>
-
-  {/* Social Links Section */}
-  <div className="mb-8">
-    <h3 className="text-[10px] md:text-sm font-semibold mb-4 uppercase tracking-[0.2em] text-gray-300">
-      Social Links
-    </h3>
-    <div className="flex gap-4 justify-center">
-      {/* Instagram */}
-      <a
-        href="#"
-        className="group relative w-10 h-10 flex items-center justify-center bg-white rounded-full text-[#24543c] overflow-hidden transition-all duration-500 shadow-sm"
-      >
-        <span className="absolute inset-0 bg-[#1a3d2c] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></span>
-        <div className="relative z-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-          <FaInstagram size={20} className="group-hover:scale-0 transition-all duration-300 absolute" />
-          <FiInstagram size={20} className="scale-0 group-hover:scale-100 text-white transition-all duration-300" />
+          {/* Responsive Brand Text */}
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight text-white">
+            KeenKeeper
+          </h2>
         </div>
-      </a>
 
-      {/* Facebook */}
-      <a
-        href="#"
-        className="group relative w-10 h-10 flex items-center justify-center bg-white rounded-full text-[#24543c] overflow-hidden transition-all duration-500 shadow-sm"
-      >
-        <span className="absolute inset-0 bg-[#1a3d2c] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></span>
-        <div className="relative z-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-          <FaFacebookF size={18} className="group-hover:scale-0 transition-all duration-300 absolute" />
-          <FiFacebook size={18} className="scale-0 group-hover:scale-100 text-white transition-all duration-300" />
+        {/* Description */}
+        <p className="text-xs md:text-sm text-gray-200 mb-6 max-w-lg leading-relaxed">
+          Your personal shelf of meaningful connections. Browse, tend, and
+          nurture the relationships that matter most.
+        </p>
+
+        {/* Social Links Section */}
+        <div className="mb-8">
+          <h3 className="text-[10px] md:text-sm font-semibold mb-4 tracking-[0.2em] text-gray-300">
+            Social Links
+          </h3>
+          <div className="flex gap-4 justify-center">
+            {/* Instagram */}
+            <a
+              href="#"
+              className="group relative w-10 h-10 flex items-center justify-center bg-white rounded-full text-[#24543c] overflow-hidden transition-all duration-500 shadow-sm"
+            >
+              <span className="absolute inset-0 bg-[#1a3d2c] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></span>
+              <div className="relative z-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <FaInstagram
+                  size={20}
+                  className="group-hover:scale-0 transition-all duration-300 absolute"
+                />
+                <FiInstagram
+                  size={20}
+                  className="scale-0 group-hover:scale-100 text-white transition-all duration-300"
+                />
+              </div>
+            </a>
+
+            {/* Facebook */}
+            <a
+              href="#"
+              className="group relative w-10 h-10 flex items-center justify-center bg-white rounded-full text-[#24543c] overflow-hidden transition-all duration-500 shadow-sm"
+            >
+              <span className="absolute inset-0 bg-[#1a3d2c] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></span>
+              <div className="relative z-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <FaFacebookF
+                  size={18}
+                  className="group-hover:scale-0 transition-all duration-300 absolute"
+                />
+                <FiFacebook
+                  size={18}
+                  className="scale-0 group-hover:scale-100 text-white transition-all duration-300"
+                />
+              </div>
+            </a>
+
+            {/* Twitter/X */}
+            <a
+              href="#"
+              className="group relative w-10 h-10 flex items-center justify-center bg-white rounded-full text-[#24543c] overflow-hidden transition-all duration-500 shadow-sm"
+            >
+              <span className="absolute inset-0 bg-[#1a3d2c] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></span>
+              <div className="relative z-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <FaXTwitter
+                  size={18}
+                  className="group-hover:scale-0 transition-all duration-300 absolute"
+                />
+                <RiTwitterXLine
+                  size={18}
+                  className="scale-0 group-hover:scale-100 text-white transition-all duration-300"
+                />
+              </div>
+            </a>
+          </div>
         </div>
-      </a>
 
-      {/* Twitter/X */}
-      <a
-        href="#"
-        className="group relative w-10 h-10 flex items-center justify-center bg-white rounded-full text-[#24543c] overflow-hidden transition-all duration-500 shadow-sm"
-      >
-        <span className="absolute inset-0 bg-[#1a3d2c] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></span>
-        <div className="relative z-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-          <FaXTwitter size={18} className="group-hover:scale-0 transition-all duration-300 absolute" />
-          <RiTwitterXLine size={18} className="scale-0 group-hover:scale-100 text-white transition-all duration-300" />
+        {/* Footer Bottom Border and Links */}
+        <div className="w-full pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] md:text-xs text-gray-400 tracking-widest">
+          <p>© 2026 KeenKeeper. All rights reserved.</p>
+
+          <div className="flex gap-4 md:gap-6">
+            <a href="#" className="hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
+              Terms of Service
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
+              Cookies
+            </a>
+          </div>
         </div>
-      </a>
-    </div>
-  </div>
-
-  {/* Footer Bottom Border and Links */}
-  <div className="w-full pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] md:text-xs text-gray-400 tracking-widest uppercase">
-    <p>© 2026 KeenKeeper. All rights reserved.</p>
-
-    <div className="flex gap-4 md:gap-6">
-      <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-      <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-      <a href="#" className="hover:text-white transition-colors">Cookies</a>
-    </div>
-  </div>
-</div>
+      </div>
     </footer>
   );
 };
