@@ -16,7 +16,6 @@ const TimeLineCard = () => {
     selectedFilter,
     setSelectedFilter,
   } = useContext(FriendsContext);
-  console.log(friendInfo, "friend");
 
   const handleTimelineByType = (e) => {
     const value = e.target.value;
@@ -30,12 +29,20 @@ const TimeLineCard = () => {
     }
   };
 
-  const handleSearch = (e)=>{
-console.log(e);
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    // console.log(value);
+    if(value.length>1){
 
-  }
-
-  console.log(filterType);
+      const searchByName = friendInfo.filter((search) =>
+        search.name.toLowerCase().includes(value.toLowerCase())
+      );
+      setFilterType(searchByName)
+      console.log(searchByName);
+    }else{
+      setFilterType([...friendInfo])
+    }
+  };
 
   return (
     <>
