@@ -8,10 +8,7 @@ const FriendsProvider = ({ children }) => {
 
   const [filterType, setFilterType] = useState([]);
   const [selectedFilter, setSelectedFilter] = useState("All");
-  const [
-    searchText, 
-    setSearchText,
-  ] = useState("");
+  const [searchText, setSearchText] = useState("");
   useEffect(() => {
     setFilterType(friendInfo);
 
@@ -30,9 +27,9 @@ const FriendsProvider = ({ children }) => {
     setFriendInfo,
     filterType,
     setFilterType,
-    selectedFilter, 
+    selectedFilter,
     setSelectedFilter,
-    searchText, 
+    searchText,
     setSearchText,
   };
 
